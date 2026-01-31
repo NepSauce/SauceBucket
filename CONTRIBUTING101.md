@@ -137,7 +137,7 @@ However, limit commit tags to a maximum of 3.
 Follow title format:
 
 ```
-[Feat]: Add inventory delete flow
+[Feat] Add inventory delete flow
 ```
 
 ### PR Description Must Include
