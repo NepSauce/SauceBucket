@@ -9,12 +9,12 @@ These rules exist to keep collaboration clean, predictable, and low-friction. Fo
 * `refactor` – internal restructuring
 * `docs` – documentation only
 * `chore` – tooling, configuration, cleanup
-* `build` - CI/CD pipeline, dependency updates
-* `test` - unit tests, component tests, coverage
-* `tech-debt` - system maintenance, reworks
-* `frontend` - UI, interface logic
-* `backend` - business logic
-* `database` - database, CRUD logic
+* `build` – CI/CD pipeline, dependency updates
+* `test` – unit tests, component tests, coverage
+* `tech-debt` – system maintenance, reworks
+* `frontend` – UI, interface logic
+* `backend` – business logic
+* `database` – database, CRUD logic
 
 
 ---
@@ -120,7 +120,7 @@ Docs: Update setup instructions
 
 ### Notes
 
-Combine multiple change tags together alphabetically for commit messages:
+Combine multiple change tags together alphabetically for commit messages, separated by `&` with no spaces:
 
 ```
 Build&Feat: Updated dependency toolchain
@@ -137,7 +137,7 @@ However, limit commit tags to a maximum of 3.
 Follow title format:
 
 ```
-[Feat]: Add inventory delete flow
+[Feat] Add inventory delete flow
 ```
 
 ### PR Description Must Include
