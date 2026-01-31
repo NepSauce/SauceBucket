@@ -8,7 +8,7 @@ These rules exist to keep collaboration clean, predictable, and low-friction. Fo
 * `fix` – bug fixes
 * `refactor` – internal restructuring
 * `docs` – documentation only
-* `chore/` – tooling, configuration, cleanup
+* `chore` – tooling, configuration, cleanup
 * `build` - CI/CD pipeline, dependency updates
 * `test` - unit tests, component tests, coverage
 * `tech-debt` - system maintenance, reworks
@@ -38,7 +38,7 @@ These rules exist to keep collaboration clean, predictable, and low-friction. Fo
 ### Examples
 
 ```
-feature/login-form
+feat/login-form
 fix/null-pointer-on-save
 refactor/inventory-service
 docs/api-overview
@@ -126,6 +126,8 @@ Combine multiple change tags together alphabetically for commit messages:
 Build&Feat: Updated dependency toolchain
 ```
 
+However, limit commit tags to a maximum of 3.
+
 ---
 
 ## 6. Pull Requests
@@ -140,7 +142,6 @@ Follow title format:
 
 ### PR Description Must Include
 
-* What the change does
 * Which issue(s) it closes
 * Build and test status
 
@@ -148,9 +149,6 @@ Follow title format:
 
 ```
 Closes Issue #23
-
-Adds delete functionality for inventory items.
-Tested via local UI and API calls.
 ```
 
 ---
