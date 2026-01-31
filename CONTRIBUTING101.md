@@ -22,8 +22,8 @@ These rules exist to keep collaboration clean, predictable, and low-friction. Fo
 ## 1. Repository Structure & Naming
 
 ### Repository
-- Repository name: **Train-Case**
-  - Example: `Saucebucket-Inventory`
+- Repository name: **kebab-case**
+  - Example: `saucebucket-inventory`
 - Default branch: `main`
 - **No direct commits to `main`** — all changes go through Pull Requests
 
