@@ -120,7 +120,7 @@ Docs: Update setup instructions
 
 ### Notes
 
-Combine multiple change tags together alphabetically for commit messages:
+Combine multiple change tags together alphabetically for commit messages, separated by `&` with no spaces:
 
 ```
 Build&Feat: Updated dependency toolchain
