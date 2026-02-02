@@ -26,7 +26,7 @@ This document defines the **canonical project structure**, architectural boundar
 ## Technology Stack
 
 - **Language:** C#
-- **Frontend:** .NET MAUI (XAML)
+- **Frontend:** Avalonia UI (XAML)
 - **Architecture:** MVVM
 - **Local Database:** SQLite
 - **Logging Model:** Append-only, commit-style change records

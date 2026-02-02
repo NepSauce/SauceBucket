@@ -1,14 +1,23 @@
-﻿namespace SauceBucket;
+﻿using Avalonia;
+using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Markup.Xaml;
+
+namespace SauceBucket;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
-	}
+    public override void Initialize()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
 
-	protected override Window CreateWindow(IActivationState? activationState)
-	{
-		return new Window(new AppShell());
-	}
+    public override void OnFrameworkInitializationCompleted()
+    {
+        if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+        {
+            desktop.MainWindow = new MainWindow();
+        }
+
+        base.OnFrameworkInitializationCompleted();
+    }
 }
