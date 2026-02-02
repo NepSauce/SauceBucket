@@ -1,6 +1,6 @@
-# .NET MAUI Navigation & Debugging Guide
+# Avalonia Navigation & Debugging Guide
 
-*Comprehensive guide for debugging and navigating .NET MAUI applications*
+*Comprehensive guide for debugging and navigating Avalonia UI applications*
 
 ---
 
