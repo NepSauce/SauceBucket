@@ -66,6 +66,23 @@
                         </Style>
                     </Button.Styles>
                 </Button>
+                <Button Content="Placeholder 2"
+                        Background="#FFE0B2"
+                        Foreground="#222"
+                        FontSize="18"
+                        FontWeight="SemiBold"
+                        FontFamily="Inter, Segoe UI, Arial"
+                        BorderBrush="#FF8C4A"
+                        BorderThickness="1"
+                        Padding="10,6"
+                        Margin="0,0,0,0">
+                    <Button.Styles>
+                        <Style Selector="Button:hover">
+                            <Setter Property="Background" Value="#FFF3D1"/>
+                            <Setter Property="Foreground" Value="#222"/>
+                        </Style>
+                    </Button.Styles>
+                </Button>
             </StackPanel>
         </StackPanel>
     </Border>
