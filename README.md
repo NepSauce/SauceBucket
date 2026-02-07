@@ -79,3 +79,20 @@ dotnet --list-sdks
 # Check runtime versions
 dotnet --list-runtimes
 ```
+
+## Quick Start
+
+To build and launch SauceBucket with a single command:
+
+```sh
+make sauce
+```
+
+This will build and run the app using the custom Makefile target.
+
+---
+
+For standard .NET commands:
+
+- Build: `dotnet build`
+- Run: `dotnet run`
