@@ -1,15 +1,15 @@
 # SauceBucket
 
 
-## !!Refer To The Contributing Handbook Before Starting!!
+## !!Refer To These Handbooks Before Starting!!
 
-
-### --> [Contributing Handbook](CONTRIBUTING_HANDBOOK.md) <--
-
+### --> [Project Structure](PROJECT_STRUCTURE.md) 
+### --> [Contributing Handbook](CONTRIBUTING_HANDBOOK.md) 
+### --> [Avalonia Navigation & Debugging Guide](AVALONIA_NAV_DEBUG_GUIDE.md) 
 
 ## Getting started
 
-### .NET MAUI Configuration
+### Avalonia Configuration
 
 **Step 1: Clone and enter repo**
 ```bash
@@ -17,9 +17,10 @@ git clone https://github.com/NepSauce/saucebucket.git
 cd saucebucket
 ```
 
-**Step 2: Install .NET 9 SDK and MAUI workload**
+**Step 2: Install .NET 9 SDK**
 ```bash
-dotnet workload install maui
+# Avalonia doesn't require workloads - just .NET SDK
+dotnet --version
 ```
 
 **Step 3: Restore & build**
@@ -30,51 +31,68 @@ dotnet build
 
 **Step 4: Run the application**
 
-Choose your target platform:
-
-- **Windows:**
+**Desktop (Windows, macOS, Linux):**
 ```bash
-dotnet run -f net9.0-windows10.0.19041.0
+dotnet run
 ```
 
-- **Android (emulator/device):**
+**Development with Hot Reload:**
 ```bash
-dotnet run -f net9.0-android
+dotnet watch run
 ```
 
-- **iOS (macOS + Xcode required):**
+**Platform-specific builds:**
 ```bash
-dotnet run -f net9.0-ios
-```
+# Windows
+dotnet publish -c Release -r win-x64 --self-contained
 
-- **Mac Catalyst (macOS required):**
-```bash
-dotnet run -f net9.0-maccatalyst
-```
+# macOS
+dotnet publish -c Release -r osx-x64 --self-contained
 
-- **Tizen (requires Tizen workload/SDK):**
-```bash
-dotnet run -f net9.0-tizen
+# Linux
+dotnet publish -c Release -r linux-x64 --self-contained
 ```
-
-**Multi-target builds:**
-```bash
-dotnet build -f <TFM>
-```
-
-### Key files
-- `SauceBucket.csproj` — project config and app icon.
-- `AppShell.xaml` — Shell and top-left icon behavior.
-- `Resources/Styles/Colors.xaml` — change `Primary` color here.
 
 ### Troubleshoot
-- **If workloads missing:**
+- **If NuGet packages missing:**
 ```bash
-dotnet workload install maui
+dotnet restore
 ```
 
 - **Clean build issues:**
 ```bash
 dotnet clean
 dotnet restore
+dotnet build
 ```
+
+- **Hot reload not working:**
+```bash
+dotnet watch run
+```
+
+- **Platform-specific issues:**
+```bash
+# Check installed .NET versions
+dotnet --list-sdks
+
+# Check runtime versions
+dotnet --list-runtimes
+```
+
+## Quick Start
+
+To build and launch SauceBucket with a single command:
+
+```sh
+make sauce
+```
+
+This will build and run the app using the custom Makefile target.
+
+---
+
+For standard .NET commands:
+
+- Build: `dotnet build`
+- Run: `dotnet run`
